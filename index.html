@@ -1,0 +1,344 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Meu Signo</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            width: 100%;
+            max-width: 500px;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 25px;
+        }
+
+        input {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            font-size: 16px;
+            outline: none;
+            margin-bottom: 15px;
+        }
+
+        input:focus {
+            border-color: #6a11cb;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 10px;
+            background: #6a11cb;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.03);
+            background: #5010a0;
+        }
+
+        #resultado {
+            margin-top: 25px;
+            padding: 20px;
+            background: #f5f5f5;
+            border-radius: 15px;
+            text-align: left;
+            border: 3px solid #6a11cb;
+        }
+
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        #resultado h2 {
+            text-align: center;
+            font-size: 28px;
+        }
+
+        #resultado p {
+            color: #444;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🔮 Meu Signo</h1>
+
+        <input
+            type="text"
+            id="signo"
+            placeholder="Digite seu signo"
+        >
+
+        <button onclick="mostrarSigno()">
+            Ver características
+        </button>
+
+        <div id="resultado"></div>
+
+    </div>
+
+    <script>
+
+        function mostrarSigno() {
+
+            let signo = document.getElementById("signo").value
+                .trim()
+                .toLowerCase()
+                .normalize("NFD")
+                .replace(/[\u0300-\u036f]/g, "");
+
+            let resultado = document.getElementById("resultado");
+            let cor = "#6a11cb";
+
+            if (signo === "") {
+
+                resultado.innerHTML = `
+                    <h2>⚠️ Digite seu signo</h2>
+                    <p>Escreva o nome de um signo para ver suas características.</p>
+                `;
+
+            }
+
+            else if (signo === "aries") {
+
+                cor = "#e53935";
+
+                resultado.innerHTML = `
+    <h2>♈ Áries</h2>
+                    <p><strong>Período:</strong> 21 de março a 19 de abril</p>
+                    <p><strong>Características:</strong> Corajoso, determinado, energético e independente.</p>
+                    <p><strong>Pontos fortes:</strong> Coragem, liderança e iniciativa.</p>
+                    <p><strong>Pontos fracos:</strong> Impulsivo, impaciente e explosivo.</p>
+                `;
+
+            }
+
+            else if (signo === "touro") {
+
+                cor = "#388e3c";
+
+                resultado.innerHTML = `
+                    <h2>♉ Touro</h2>
+                    <p><strong>Período:</strong> 20 de abril a 20 de maio</p>
+                    <p><strong>Características:</strong> Paciente, determinado, confiável e tranquilo.</p>
+                    <p><strong>Pontos fortes:</strong> Lealdade, paciência e persistência.</p>
+                    <p><strong>Pontos fracos:</strong> Teimoso, possessivo e resistente a mudanças.</p>
+                `;
+
+            }
+
+            else if (signo === "gemeos") {
+
+                cor = "#f9a825";
+
+                resultado.innerHTML = `
+                    <h2>♊ Gêmeos</h2>
+                    <p><strong>Período:</strong> 21 de maio a 20 de junho</p>
+                    <p><strong>Características:</strong> Comunicativo, curioso, inteligente e versátil.</p>
+                    <p><strong>Pontos fortes:</strong> Comunicação, criatividade e adaptação.</p>
+                    <p><strong>Pontos fracos:</strong> Indeciso, inquieto e disperso.</p>
+                `;
+
+            }
+
+            else if (signo === "cancer") {
+
+                cor = "#1976d2";
+
+                resultado.innerHTML = `
+                    <h2>♋ Câncer</h2>
+                    <p><strong>Período:</strong> 21 de junho a 22 de julho</p>
+                    <p><strong>Características:</strong> Sensível, carinhoso, protetor e intuitivo.</p>
+                    <p><strong>Pontos fortes:</strong> Empatia, lealdade e cuidado.</p>
+                    <p><strong>Pontos fracos:</strong> Muito sensível, inseguro e apegado.</p>
+                `;
+
+            }
+
+            else if (signo === "leao") {
+
+                cor = "#ef6c00";
+
+                resultado.innerHTML = `
+                    <h2>♌ Leão</h2>
+                    <p><strong>Período:</strong> 23 de julho a 22 de agosto</p>
+                    <p><strong>Características:</strong> Confiante, criativo, generoso e determinado.</p>
+                    <p><strong>Pontos fortes:</strong> Liderança, coragem e criatividade.</p>
+                    <p><strong>Pontos fracos:</strong> Orgulhoso, teimoso e gosta de atenção.</p>
+                `;
+
+            }
+
+            else if (signo === "virgem") {
+
+                cor = "#558b2f";
+
+                resultado.innerHTML = `
+                    <h2>♍ Virgem</h2>
+                    <p><strong>Período:</strong> 23 de agosto a 22 de setembro</p>
+                    <p><strong>Características:</strong> Organizado, inteligente, responsável e detalhista.</p>
+                    <p><strong>Pontos fortes:</strong> Organização, inteligência e dedicação.</p>
+                    <p><strong>Pontos fracos:</strong> Muito crítico e perfeccionista.</p>
+                `;
+
+            }
+
+            else if (signo === "libra") {
+
+                cor = "#d81b60";
+
+                resultado.innerHTML = `
+                    <h2>♎ Libra</h2>
+                    <p><strong>Período:</strong> 23 de setembro a 22 de outubro</p>
+                    <p><strong>Características:</strong> Justo, sociável, diplomático e equilibrado.</p>
+                    <p><strong>Pontos fortes:</strong> Gentileza, diplomacia e senso de justiça.</p>
+                    <p><strong>Pontos fracos:</strong> Indeciso e costuma evitar conflitos.</p>
+                `;
+
+            }
+
+            else if (signo === "escorpiao") {
+
+                cor = "#6a1b9a";
+
+                resultado.innerHTML = `
+                    <h2>♏ Escorpião</h2>
+                    <p><strong>Período:</strong> 23 de outubro a 21 de novembro</p>
+                    <p><strong>Características:</strong> Intenso, determinado, observador e misterioso.</p>
+                    <p><strong>Pontos fortes:</strong> Coragem, lealdade e determinação.</p>
+                    <p><strong>Pontos fracos:</strong> Ciumento, desconfiado e reservado.</p>
+                `;
+
+            }
+
+            else if (signo === "sagitario") {
+
+                cor = "#00838f";
+
+                resultado.innerHTML = `
+                    <h2>♐ Sagitário</h2>
+                    <p><strong>Período:</strong> 22 de novembro a 21 de dezembro</p>
+                    <p><strong>Características:</strong> Aventureiro, otimista, divertido e independente.</p>
+                    <p><strong>Pontos fortes:</strong> Otimismo, sinceridade e entusiasmo.</p>
+                    <p><strong>Pontos fracos:</strong> Impulsivo, impaciente e fala sem pensar.</p>
+                `;
+
+            }
+
+            else if (signo === "capricornio") {
+
+                cor = "#5d4037";
+
+                resultado.innerHTML = `
+                    <h2>♑ Capricórnio</h2>
+                    <p><strong>Período:</strong> 22 de dezembro a 19 de janeiro</p>
+                    <p><strong>Características:</strong> Responsável, disciplinado, ambicioso e determinado.</p>
+                    <p><strong>Pontos fortes:</strong> Disciplina, responsabilidade e foco.</p>
+                    <p><strong>Pontos fracos:</strong> Rígido, pessimista e muito exigente.</p>
+                `;
+
+            }
+
+            else if (signo === "aquario") {
+
+                cor = "#0288d1";
+
+                resultado.innerHTML = `
+                    <h2>♒ Aquário</h2>
+                    <p><strong>Período:</strong> 20 de janeiro a 18 de fevereiro</p>
+                    <p><strong>Características:</strong> Criativo, independente, inteligente e original.</p>
+                    <p><strong>Pontos fortes:</strong> Criatividade, inteligência e independência.</p>
+                    <p><strong>Pontos fracos:</strong> Distante, imprevisível e teimoso.</p>
+                `;
+
+            }
+
+            else if (signo === "peixes") {
+
+                cor = "#7e57c2";
+
+                resultado.innerHTML = `
+                    <h2>♓ Peixes</h2>
+                    <p><strong>Período:</strong> 19 de fevereiro a 20 de março</p>
+                    <p><strong>Características:</strong> Sensível, imaginativo, empático e gentil.</p>
+                    <p><strong>Pontos fortes:</strong> Empatia, criatividade e intuição.</p>
+                    <p><strong>Pontos fracos:</strong> Muito sensível, distraído e indeciso.</p>
+                `;
+
+            }
+
+            else {
+
+                resultado.innerHTML = `
+                    <h2>❌ Signo não encontrado</h2>
+                    <p>Digite um signo válido, como Áries, Gêmeos, Touro ou Peixes.</p>
+                `;
+
+            }
+
+            resultado.style.borderColor = cor;
+
+            let titulo = resultado.querySelector("h2");
+
+            if (titulo) {
+                titulo.style.color = cor;
+            }
+
+            resultado.style.animation = "none";
+            void resultado.offsetWidth;
+            resultado.style.animation = "aparecer 0.5s ease";
+
+        }
+
+    </script>
+
+</body>
+
+</html>
