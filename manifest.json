@@ -1,18 +1,10 @@
-json
-
 {
-  "name": "Zod-aco Aplicativo",
-  "short_name": "Zod-aco",
-  "start_url": "index.html",
-  "display":"standalone",
-  "background_color":"#0f172a",
-  "theme-color": "#0f172a",
-  "orientation": "portrait",
-  "icons": [
-    {
-      "src": "https://placehold.co/192x192/38bdf8/0f172a?text=zod",
-      "sizes":"192x192",
-      "type":"image/png"
-    }
-  ]
+    "name": "Meu Signo",
+    "short_name": "Meu Signo",
+    "description": "Descubra informações sobre os signos do zodíaco.",
+    "start_url": "./",
+    "display": "standalone",
+    "background_color": "#4b0082",
+    "theme_color": "#4b0082",
+    "orientation": "portrait"
 }
