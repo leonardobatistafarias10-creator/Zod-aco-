@@ -2,11 +2,8 @@
 <html lang="pt-BR">
 
 <head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="manifest.json">
 
     <title>Meu Signo</title>
 
@@ -17,231 +14,132 @@
         }
 
         body {
-
             margin: 0;
-
             min-height: 100vh;
-
             font-family: Arial, sans-serif;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #6a11cb,
-                    #2575fc
-                );
-
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
             display: flex;
-
             justify-content: center;
-
             align-items: center;
-
             padding: 20px;
         }
 
-
         .container {
-
             width: 100%;
-
             max-width: 760px;
-
             background: white;
-
             border-radius: 40px;
-
             padding: 45px;
-
-            box-shadow:
-                0 10px 30px
-                rgba(0, 0, 0, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
 
-
         h1 {
-
             text-align: center;
-
             color: #5b21b6;
-
             font-size: 48px;
-
             margin-bottom: 20px;
         }
 
-
         .subtitulo {
-
             text-align: center;
-
             color: #666;
-
             font-size: 27px;
-
             margin-bottom: 45px;
         }
 
-
         label {
-
             display: block;
-
             color: #4c1d95;
-
             font-size: 27px;
-
             font-weight: bold;
-
             margin-bottom: 12px;
         }
 
-
         input {
-
             width: 100%;
-
             padding: 22px;
-
             border: 4px solid #ddd;
-
             border-radius: 25px;
-
             font-size: 25px;
-
             margin-bottom: 30px;
-
             outline: none;
         }
 
-
         input:focus {
-
             border-color: #6a11cb;
         }
 
-
         .ou {
-
             text-align: center;
-
             color: #6a11cb;
-
             font-size: 32px;
-
             font-weight: bold;
-
             margin: 5px 0 35px;
         }
 
+        .campo-data {
+            position: relative;
+        }
 
         #dataNascimento {
-
             cursor: pointer;
-
             background: white;
         }
 
-
         button {
-
             width: 100%;
-
             padding: 25px;
-
             border: none;
-
             border-radius: 25px;
-
-            background:
-                linear-gradient(
-                    90deg,
-                    #6a11cb,
-                    #2575fc
-                );
-
+            background: linear-gradient(90deg, #6a11cb, #2575fc);
             color: white;
-
             font-size: 27px;
-
             font-weight: bold;
-
             cursor: pointer;
         }
 
-
         button:active {
-
             transform: scale(0.98);
         }
 
-
         #resultado {
-
             margin-top: 30px;
-
             padding: 25px;
-
             border-radius: 25px;
-
             background: #f3efff;
-
             color: #351477;
-
             font-size: 21px;
-
             line-height: 1.6;
-
             display: none;
         }
 
-
         .desenvolvedores {
-
             margin-top: 45px;
-
             padding: 30px;
-
             border-radius: 25px;
-
             background: #17104f;
-
             color: white;
-
             text-align: center;
         }
 
-
         .desenvolvedores h2 {
-
             color: #c4b5fd;
-
             margin-top: 0;
         }
 
-
         .desenvolvedores p {
-
             font-size: 22px;
         }
 
-
         .nome-desenvolvedor {
-
             font-size: 26px;
-
             font-weight: bold;
         }
 
-
         .rodape {
-
             text-align: center;
-
             color: #777;
-
             font-size: 20px;
-
             margin-top: 35px;
         }
 
@@ -249,215 +147,123 @@
         /* CALENDÁRIO */
 
         .calendario-fundo {
-
             display: none;
-
             position: fixed;
-
             inset: 0;
-
-            background:
-                rgba(0, 0, 0, 0.65);
-
+            background: rgba(0, 0, 0, 0.65);
             justify-content: center;
-
             align-items: center;
-
             z-index: 1000;
-
             padding: 20px;
         }
 
-
         .calendario {
-
             width: 100%;
-
             max-width: 420px;
-
             background: white;
-
             border-radius: 28px;
-
             padding: 25px;
-
-            box-shadow:
-                0 10px 40px
-                rgba(0, 0, 0, 0.4);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
         }
 
-
         .calendario-topo {
-
             display: flex;
-
             align-items: center;
-
             justify-content: space-between;
-
             margin-bottom: 20px;
         }
 
-
         .calendario-topo button {
-
             width: 50px;
-
             height: 50px;
-
             padding: 0;
-
             border-radius: 50%;
-
             font-size: 25px;
-
             background: #f0ebff;
-
             color: #5b21b6;
         }
 
-
         #mesAno {
-
             font-size: 23px;
-
             font-weight: bold;
-
             color: #351477;
-
             text-align: center;
         }
-
 
         .dias-semana,
         .dias {
-
             display: grid;
-
-            grid-template-columns:
-                repeat(7, 1fr);
-
+            grid-template-columns: repeat(7, 1fr);
             gap: 6px;
         }
 
-
         .dias-semana div {
-
             text-align: center;
-
             font-weight: bold;
-
             color: #777;
-
             padding: 8px 0;
         }
 
-
         .dia {
-
             border: none;
-
             background: white;
-
             color: #222;
-
             padding: 12px 0;
-
             border-radius: 12px;
-
             font-size: 17px;
-
             cursor: pointer;
         }
 
-
         .dia:hover {
-
             background: #eee8ff;
         }
 
-
         .dia.selecionado {
-
             background: #6a11cb;
-
             color: white;
         }
 
-
         .calendario-botoes {
-
             display: flex;
-
             gap: 12px;
-
             margin-top: 25px;
         }
 
-
         .btn-cancelar,
         .btn-ok {
-
             flex: 1;
-
             padding: 15px;
-
             border-radius: 15px;
-
             font-size: 18px;
-
             font-weight: bold;
         }
 
-
         .btn-cancelar {
-
             background: #eeeeee;
-
             color: #555;
         }
 
-
         .btn-ok {
-
-            background:
-                linear-gradient(
-                    90deg,
-                    #6a11cb,
-                    #2575fc
-                );
-
+            background: linear-gradient(90deg, #6a11cb, #2575fc);
             color: white;
         }
 
     </style>
-
 </head>
 
 
 <body>
 
-
     <div class="container">
-
 
         <h1>🔮 Meu Signo</h1>
 
-
         <div class="subtitulo">
-
-            Descubra as características
-            do seu signo!
-
+            Descubra as características do seu signo!
         </div>
 
 
-        <label>
-
-            👤 Seu nome
-
-        </label>
-
+        <label>👤 Seu nome</label>
 
         <input
             type="text"
@@ -465,12 +271,7 @@
             placeholder="Digite seu nome">
 
 
-        <label>
-
-            ♈ Seu signo
-
-        </label>
-
+        <label>♈ Seu signo</label>
 
         <input
             type="text"
@@ -478,32 +279,25 @@
             placeholder="Digite seu signo">
 
 
-        <div class="ou">
+        <div class="ou">OU</div>
 
-            OU
+
+        <label>📅 Data de nascimento</label>
+
+        <div class="campo-data">
+
+            <input
+                type="text"
+                id="dataNascimento"
+                placeholder="dd / mm / aaaa"
+                readonly
+                onclick="abrirCalendario()">
 
         </div>
 
 
-        <label>
-
-            📅 Data de nascimento
-
-        </label>
-
-
-        <input
-            type="text"
-            id="dataNascimento"
-            placeholder="dd / mm / aaaa"
-            readonly
-            onclick="abrirCalendario()">
-
-
         <button onclick="mostrarSigno()">
-
             ✨ Descobrir meu signo
-
         </button>
 
 
@@ -512,36 +306,22 @@
 
         <div class="desenvolvedores">
 
-            <h2>
-
-                👨‍💻 Desenvolvedores
-
-            </h2>
-
+            <h2>👨‍💻 Desenvolvedores</h2>
 
             <p>
-
                 Projeto criado e desenvolvido por:
-
             </p>
 
-
             <div class="nome-desenvolvedor">
-
                 Leonardo Batista
-
             </div>
 
         </div>
 
 
         <div class="rodape">
-
-            ⭐ Meu Signo —
-            Conheça mais sobre você!
-
+            ⭐ Meu Signo — Conheça mais sobre você!
         </div>
-
 
     </div>
 
@@ -549,34 +329,23 @@
 
     <!-- CALENDÁRIO -->
 
-
     <div
         class="calendario-fundo"
         id="calendarioFundo">
 
-
         <div class="calendario">
-
 
             <div class="calendario-topo">
 
-
                 <button onclick="mesAnterior()">
-
                     ‹
-
                 </button>
-
 
                 <div id="mesAno"></div>
 
-
                 <button onclick="proximoMes()">
-
                     ›
-
                 </button>
-
 
             </div>
 
@@ -584,17 +353,11 @@
             <div class="dias-semana">
 
                 <div>D</div>
-
                 <div>S</div>
-
                 <div>T</div>
-
                 <div>Q</div>
-
                 <div>Q</div>
-
                 <div>S</div>
-
                 <div>S</div>
 
             </div>
@@ -608,27 +371,19 @@
 
             <div class="calendario-botoes">
 
-
                 <button
                     class="btn-cancelar"
                     onclick="fecharCalendario()">
-
                     ❌ Cancelar
-
                 </button>
-
 
                 <button
                     class="btn-ok"
                     onclick="confirmarData()">
-
                     ✅ OK
-
                 </button>
 
-
             </div>
-
 
         </div>
 
@@ -636,946 +391,716 @@
 
 
 
-<script>
+    <script>
 
+        /* CALENDÁRIO */
 
-/* =========================
-   CALENDÁRIO
-========================= */
+        let dataAtual = new Date();
 
+        let mesAtual = dataAtual.getMonth();
 
-let dataAtual = new Date();
+        let anoAtual = dataAtual.getFullYear();
 
+        let diaSelecionado = null;
 
-let mesAtual =
-    dataAtual.getMonth();
+        let mesSelecionado = null;
 
+        let anoSelecionado = null;
 
-let anoAtual =
-    dataAtual.getFullYear();
 
+        const meses = [
 
-let diaSelecionado = null;
+            "Janeiro",
+            "Fevereiro",
+            "Março",
+            "Abril",
+            "Maio",
+            "Junho",
+            "Julho",
+            "Agosto",
+            "Setembro",
+            "Outubro",
+            "Novembro",
+            "Dezembro"
 
-let mesSelecionado = null;
+        ];
 
-let anoSelecionado = null;
 
+        function abrirCalendario() {
 
-const meses = [
+            let campo =
+                document.getElementById("dataNascimento");
 
-    "Janeiro",
+            let data = campo.value;
 
-    "Fevereiro",
 
-    "Março",
+            if (data !== "") {
 
-    "Abril",
+                let partes = data.split("/");
 
-    "Maio",
+                if (partes.length === 3) {
 
-    "Junho",
+                    diaSelecionado =
+                        parseInt(partes[0]);
 
-    "Julho",
+                    mesSelecionado =
+                        parseInt(partes[1]) - 1;
 
-    "Agosto",
+                    anoSelecionado =
+                        parseInt(partes[2]);
 
-    "Setembro",
+                    mesAtual =
+                        mesSelecionado;
 
-    "Outubro",
+                    anoAtual =
+                        anoSelecionado;
 
-    "Novembro",
+                }
 
-    "Dezembro"
+            } else {
 
-];
+                diaSelecionado = null;
 
+                mesSelecionado = null;
 
+                anoSelecionado = null;
 
-function abrirCalendario() {
+                mesAtual =
+                    dataAtual.getMonth();
 
+                anoAtual =
+                    dataAtual.getFullYear();
 
-    let campo =
-        document.getElementById(
-            "dataNascimento"
-        );
-
-
-    let data = campo.value;
-
-
-    if (data !== "") {
-
-
-        let partes =
-            data.split("/");
-
-
-        if (partes.length === 3) {
-
-
-            diaSelecionado =
-                parseInt(
-                    partes[0]
-                );
-
-
-            mesSelecionado =
-                parseInt(
-                    partes[1]
-                ) - 1;
-
-
-            anoSelecionado =
-                parseInt(
-                    partes[2]
-                );
-
-
-            mesAtual =
-                mesSelecionado;
-
-
-            anoAtual =
-                anoSelecionado;
-
-        }
-
-
-    } else {
-
-
-        diaSelecionado = null;
-
-        mesSelecionado = null;
-
-        anoSelecionado = null;
-
-
-        mesAtual =
-            dataAtual.getMonth();
-
-
-        anoAtual =
-            dataAtual.getFullYear();
-
-    }
-
-
-    document
-        .getElementById(
-            "calendarioFundo"
-        )
-        .style.display = "flex";
-
-
-    criarCalendario();
-
-}
-
-
-
-function criarCalendario() {
-
-
-    let mesAno =
-        document.getElementById(
-            "mesAno"
-        );
-
-
-    let dias =
-        document.getElementById(
-            "dias"
-        );
-
-
-    mesAno.innerText =
-        meses[mesAtual] +
-        " de " +
-        anoAtual;
-
-
-    dias.innerHTML = "";
-
-
-    let primeiroDia =
-        new Date(
-            anoAtual,
-            mesAtual,
-            1
-        ).getDay();
-
-
-    let quantidadeDias =
-        new Date(
-            anoAtual,
-            mesAtual + 1,
-            0
-        ).getDate();
-
-
-    for (
-        let i = 0;
-        i < primeiroDia;
-        i++
-    ) {
-
-
-        let vazio =
-            document.createElement(
-                "div"
-            );
-
-
-        dias.appendChild(vazio);
-
-    }
-
-
-    for (
-        let dia = 1;
-        dia <= quantidadeDias;
-        dia++
-    ) {
-
-
-        let botao =
-            document.createElement(
-                "button"
-            );
-
-
-        botao.className = "dia";
-
-
-        botao.innerText = dia;
-
-
-        if (
-
-            dia === diaSelecionado &&
-
-            mesAtual === mesSelecionado &&
-
-            anoAtual === anoSelecionado
-
-        ) {
-
-
-            botao.classList.add(
-                "selecionado"
-            );
-
-        }
-
-
-        botao.onclick = function() {
-
-
-            diaSelecionado =
-                dia;
-
-
-            mesSelecionado =
-                mesAtual;
-
-
-            anoSelecionado =
-                anoAtual;
+            }
 
 
             document
-                .querySelectorAll(
-                    ".dia"
-                )
-                .forEach(
-                    function(item) {
+                .getElementById("calendarioFundo")
+                .style.display = "flex";
 
-                        item.classList.remove(
-                            "selecionado"
-                        );
 
-                    }
+            criarCalendario();
+
+        }
+
+
+        function criarCalendario() {
+
+            let mesAno =
+                document.getElementById("mesAno");
+
+            let dias =
+                document.getElementById("dias");
+
+
+            mesAno.innerHTML =
+                meses[mesAtual] +
+                " de " +
+                anoAtual;
+
+
+            dias.innerHTML = "";
+
+
+            let primeiroDia =
+                new Date(
+                    anoAtual,
+                    mesAtual,
+                    1
+                ).getDay();
+
+
+            let quantidadeDias =
+                new Date(
+                    anoAtual,
+                    mesAtual + 1,
+                    0
+                ).getDate();
+
+
+            for (
+                let i = 0;
+                i < primeiroDia;
+                i++
+            ) {
+
+                let vazio =
+                    document.createElement("div");
+
+                dias.appendChild(vazio);
+
+            }
+
+
+            for (
+                let dia = 1;
+                dia <= quantidadeDias;
+                dia++
+            ) {
+
+                let botao =
+                    document.createElement("button");
+
+
+                botao.className = "dia";
+
+                botao.innerText = dia;
+
+
+                if (
+                    dia === diaSelecionado &&
+                    mesAtual === mesSelecionado &&
+                    anoAtual === anoSelecionado
+                ) {
+
+                    botao.classList.add("selecionado");
+
+                }
+
+
+                botao.onclick = function () {
+
+                    diaSelecionado = dia;
+
+                    mesSelecionado = mesAtual;
+
+                    anoSelecionado = anoAtual;
+
+
+                    document
+                        .querySelectorAll(".dia")
+                        .forEach(function(item) {
+
+                            item.classList.remove(
+                                "selecionado"
+                            );
+
+                        });
+
+
+                    botao.classList.add(
+                        "selecionado"
+                    );
+
+                };
+
+
+                dias.appendChild(botao);
+
+            }
+
+        }
+
+
+        function mesAnterior() {
+
+            mesAtual--;
+
+            if (mesAtual < 0) {
+
+                mesAtual = 11;
+
+                anoAtual--;
+
+            }
+
+            diaSelecionado = null;
+
+            mesSelecionado = null;
+
+            anoSelecionado = null;
+
+            criarCalendario();
+
+        }
+
+
+        function proximoMes() {
+
+            mesAtual++;
+
+            if (mesAtual > 11) {
+
+                mesAtual = 0;
+
+                anoAtual++;
+
+            }
+
+            diaSelecionado = null;
+
+            mesSelecionado = null;
+
+            anoSelecionado = null;
+
+            criarCalendario();
+
+        }
+
+
+        function confirmarData() {
+
+            if (
+                diaSelecionado === null ||
+                mesSelecionado === null ||
+                anoSelecionado === null
+            ) {
+
+                alert(
+                    "📅 Escolha primeiro o dia do seu nascimento."
+                );
+
+                return;
+
+            }
+
+
+            let dataEscolhida =
+                new Date(
+                    anoSelecionado,
+                    mesSelecionado,
+                    diaSelecionado
                 );
 
 
-            botao.classList.add(
-                "selecionado"
-            );
+            let hoje = new Date();
+
+
+            if (dataEscolhida > hoje) {
+
+                alert(
+                    "⚠️ A data de nascimento não pode ser no futuro."
+                );
+
+                return;
+
+            }
+
+
+            let dia =
+                String(diaSelecionado)
+                .padStart(2, "0");
+
+
+            let mes =
+                String(mesSelecionado + 1)
+                .padStart(2, "0");
+
+
+            let ano =
+                anoSelecionado;
+
+
+            document
+                .getElementById("dataNascimento")
+                .value =
+                dia +
+                " / " +
+                mes +
+                " / " +
+                ano;
+
+
+            fecharCalendario();
+
+        }
+
+
+        function fecharCalendario() {
+
+            document
+                .getElementById("calendarioFundo")
+                .style.display = "none";
+
+        }
+
+
+        /* NORMALIZAR TEXTO */
+
+        function normalizarTexto(texto) {
+
+            return texto
+                .toLowerCase()
+                .normalize("NFD")
+                .replace(/[\u0300-\u036f]/g, "")
+                .trim();
+
+        }
+
+
+        /* DESCOBRIR SIGNO PELA DATA */
+
+        function descobrirSigno(data) {
+
+            let partes = data.split("/");
+
+
+            if (partes.length !== 3) {
+
+                return "";
+
+            }
+
+
+            let dia =
+                parseInt(partes[0]);
+
+            let mes =
+                parseInt(partes[1]);
+
+
+            if (
+                !dia ||
+                !mes ||
+                dia < 1 ||
+                dia > 31 ||
+                mes < 1 ||
+                mes > 12
+            ) {
+
+                return "";
+
+            }
+
+
+            if (
+                (mes === 3 && dia >= 21) ||
+                (mes === 4 && dia <= 19)
+            ) {
+
+                return "aries";
+
+            }
+
+
+            if (
+                (mes === 4 && dia >= 20) ||
+                (mes === 5 && dia <= 20)
+            ) {
+
+                return "touro";
+
+            }
+
+
+            if (
+                (mes === 5 && dia >= 21) ||
+                (mes === 6 && dia <= 20)
+            ) {
+
+                return "gemeos";
+
+            }
+
+
+            if (
+                (mes === 6 && dia >= 21) ||
+                (mes === 7 && dia <= 22)
+            ) {
+
+                return "cancer";
+
+            }
+
+
+            if (
+                (mes === 7 && dia >= 23) ||
+                (mes === 8 && dia <= 22)
+            ) {
+
+                return "leao";
+
+            }
+
+
+            if (
+                (mes === 8 && dia >= 23) ||
+                (mes === 9 && dia <= 22)
+            ) {
+
+                return "virgem";
+
+            }
+
+
+            if (
+                (mes === 9 && dia >= 23) ||
+                (mes === 10 && dia <= 22)
+            ) {
+
+                return "libra";
+
+            }
+
+
+            if (
+                (mes === 10 && dia >= 23) ||
+                (mes === 11 && dia <= 21)
+            ) {
+
+                return "escorpiao";
+
+            }
+
+
+            if (
+                (mes === 11 && dia >= 22) ||
+                (mes === 12 && dia <= 21)
+            ) {
+
+                return "sagitario";
+
+            }
+
+
+            if (
+                (mes === 12 && dia >= 22) ||
+                (mes === 1 && dia <= 19)
+            ) {
+
+                return "capricornio";
+
+            }
+
+
+            if (
+                (mes === 1 && dia >= 20) ||
+                (mes === 2 && dia <= 18)
+            ) {
+
+                return "aquario";
+
+            }
+
+
+            if (
+                (mes === 2 && dia >= 19) ||
+                (mes === 3 && dia <= 20)
+            ) {
+
+                return "peixes";
+
+            }
+
+
+            return "";
+
+        }
+
+
+        /* CARACTERÍSTICAS */
+
+        const caracteristicas = {
+
+            aries:
+                "🔥 Áries é uma pessoa corajosa, determinada e cheia de energia. Gosta de desafios, aventuras e costuma tomar iniciativa.",
+
+            touro:
+                "🌱 Touro é conhecido por ser paciente, determinado e leal. Valoriza estabilidade, conforto e segurança.",
+
+            gemeos:
+                "💨 Gêmeos é comunicativo, curioso e inteligente. Gosta de aprender, conversar e conhecer coisas novas.",
+
+            cancer:
+                "🌊 Câncer é carinhoso, sensível e muito ligado à família. Valoriza amizades verdadeiras e sentimentos profundos.",
+
+            leao:
+                "☀️ Leão é confiante, criativo e carismático. Gosta de se destacar e costuma ter uma personalidade marcante.",
+
+            virgem:
+                "🌿 Virgem é organizado, observador e responsável. Gosta de ajudar e costuma prestar atenção aos pequenos detalhes.",
+
+            libra:
+                "⚖️ Libra é diplomático, sociável e gosta de harmonia. Valoriza relacionamentos, beleza e equilíbrio.",
+
+            escorpiao:
+                "🦂 Escorpião é intenso, determinado e misterioso. Possui sentimentos profundos e muita força de vontade.",
+
+            sagitario:
+                "🏹 Sagitário é aventureiro, otimista e livre. Gosta de viajar, aprender e viver novas experiências.",
+
+            capricornio:
+                "⛰️ Capricórnio é responsável, disciplinado e persistente. Costuma trabalhar duro para alcançar seus objetivos.",
+
+            aquario:
+                "⚡ Aquário é criativo, independente e inovador. Gosta de liberdade e costuma ter ideias diferentes.",
+
+            peixes:
+                "🐟 Peixes é sensível, imaginativo e empático. Possui muita criatividade e costuma se importar bastante com os outros."
 
         };
 
 
-        dias.appendChild(
-            botao
-        );
+        /* NOMES DOS SIGNOS */
 
-    }
+        const nomesSignos = {
 
-}
+            aries: "Áries",
+            touro: "Touro",
+            gemeos: "Gêmeos",
+            cancer: "Câncer",
+            leao: "Leão",
+            virgem: "Virgem",
+            libra: "Libra",
+            escorpiao: "Escorpião",
+            sagitario: "Sagitário",
+            capricornio: "Capricórnio",
+            aquario: "Aquário",
+            peixes: "Peixes"
 
+        };
 
 
-function mesAnterior() {
+        /* MOSTRAR SIGNO */
 
+        function mostrarSigno() {
 
-    mesAtual--;
+            let nome =
+                document
+                .getElementById("nome")
+                .value
+                .trim();
 
 
-    if (mesAtual < 0) {
+            let signoDigitado =
+                document
+                .getElementById("signo")
+                .value;
 
-        mesAtual = 11;
 
-        anoAtual--;
+            let data =
+                document
+                .getElementById("dataNascimento")
+                .value;
 
-    }
 
+            let resultado =
+                document
+                .getElementById("resultado");
 
-    diaSelecionado = null;
 
-    mesSelecionado = null;
+            let signo = "";
 
-    anoSelecionado = null;
 
+            /*
+            DATA TEM PRIORIDADE
+            */
 
-    criarCalendario();
+            if (data !== "") {
 
-}
+                signo =
+                    descobrirSigno(data);
 
+            }
 
 
-function proximoMes() {
+            /*
+            SE NÃO TIVER DATA,
+            USA O SIGNO DIGITADO
+            */
 
+            else if (
+                signoDigitado.trim() !== ""
+            ) {
 
-    mesAtual++;
+                signo =
+                    normalizarTexto(
+                        signoDigitado
+                    );
 
+            }
 
-    if (mesAtual > 11) {
 
-        mesAtual = 0;
+            /*
+            NENHUMA INFORMAÇÃO
+            */
 
-        anoAtual++;
+            else {
 
-    }
+                resultado.style.display =
+                    "block";
 
+                resultado.innerHTML =
+                    "⚠️ Digite seu signo ou escolha sua data de nascimento.";
 
-    diaSelecionado = null;
+                return;
 
-    mesSelecionado = null;
+            }
 
-    anoSelecionado = null;
 
+            /*
+            SIGNO INVÁLIDO
+            */
 
-    criarCalendario();
+            if (
+                !caracteristicas[signo]
+            ) {
 
-}
+                resultado.style.display =
+                    "block";
 
+                resultado.innerHTML =
+                    "❌ Não reconheci esse signo. Digite um dos 12 signos do zodíaco.";
 
+                return;
 
-function confirmarData() {
+            }
 
 
-    if (
+            /*
+            NOME
+            */
 
-        diaSelecionado === null ||
+            let mensagemNome = "";
 
-        mesSelecionado === null ||
 
-        anoSelecionado === null
+            if (nome !== "") {
 
-    ) {
+                mensagemNome =
+                    "Olá, " +
+                    nome +
+                    "! 👋<br><br>";
 
+            }
 
-        alert(
-            "📅 Escolha primeiro o dia do seu nascimento."
-        );
 
+            /*
+            RESULTADO
+            */
 
-        return;
+            resultado.style.display =
+                "block";
 
-    }
 
+            resultado.innerHTML =
+                mensagemNome +
+                "<strong>✨ Seu signo é " +
+                nomesSignos[signo] +
+                "!</strong><br><br>" +
+                caracteristicas[signo];
 
-    let dataEscolhida =
-        new Date(
-            anoSelecionado,
-            mesSelecionado,
-            diaSelecionado
-        );
+        }
 
+    </script>
 
-    let hoje =
-        new Date();
 
+    <!-- SERVICE WORKER -->
 
-    if (dataEscolhida > hoje) {
+    <script>
 
+        if ("serviceWorker" in navigator) {
 
-        alert(
-            "⚠️ A data de nascimento não pode ser no futuro."
-        );
+            window.addEventListener("load", function() {
 
+                navigator.serviceWorker.register(
+                    "sw.js"
+                );
 
-        return;
+            });
 
-    }
+        }
 
-
-    let dia =
-        String(
-            diaSelecionado
-        ).padStart(2, "0");
-
-
-    let mes =
-        String(
-            mesSelecionado + 1
-        ).padStart(2, "0");
-
-
-    let ano =
-        anoSelecionado;
-
-
-    document
-        .getElementById(
-            "dataNascimento"
-        )
-        .value =
-
-        dia +
-        " / " +
-        mes +
-        " / " +
-        ano;
-
-
-    fecharCalendario();
-
-}
-
-
-
-function fecharCalendario() {
-
-
-    document
-        .getElementById(
-            "calendarioFundo"
-        )
-        .style.display = "none";
-
-}
-
-
-
-/* =========================
-   NORMALIZAR TEXTO
-========================= */
-
-
-function normalizarTexto(texto) {
-
-
-    return texto
-
-        .toLowerCase()
-
-        .normalize("NFD")
-
-        .replace(
-            /[\u0300-\u036f]/g,
-            ""
-        )
-
-        .trim();
-
-}
-
-
-
-/* =========================
-   DESCOBRIR SIGNO PELA DATA
-========================= */
-
-
-function descobrirSigno(data) {
-
-
-    let partes =
-        data.split("/");
-
-
-    if (partes.length !== 3) {
-
-        return "";
-
-    }
-
-
-    let dia =
-        parseInt(partes[0]);
-
-
-    let mes =
-        parseInt(partes[1]);
-
-
-    if (
-
-        !dia ||
-
-        !mes ||
-
-        dia < 1 ||
-
-        dia > 31 ||
-
-        mes < 1 ||
-
-        mes > 12
-
-    ) {
-
-        return "";
-
-    }
-
-
-
-    if (
-
-        (mes === 3 && dia >= 21) ||
-
-        (mes === 4 && dia <= 19)
-
-    ) {
-
-        return "aries";
-
-    }
-
-
-
-    if (
-
-        (mes === 4 && dia >= 20) ||
-
-        (mes === 5 && dia <= 20)
-
-    ) {
-
-        return "touro";
-
-    }
-
-
-
-    if (
-
-        (mes === 5 && dia >= 21) ||
-
-        (mes === 6 && dia <= 20)
-
-    ) {
-
-        return "gemeos";
-
-    }
-
-
-
-    if (
-
-        (mes === 6 && dia >= 21) ||
-
-        (mes === 7 && dia <= 22)
-
-    ) {
-
-        return "cancer";
-
-    }
-
-
-
-    if (
-
-        (mes === 7 && dia >= 23) ||
-
-        (mes === 8 && dia <= 22)
-
-    ) {
-
-        return "leao";
-
-    }
-
-
-
-    if (
-
-        (mes === 8 && dia >= 23) ||
-
-        (mes === 9 && dia <= 22)
-
-    ) {
-
-        return "virgem";
-
-    }
-
-
-
-    if (
-
-        (mes === 9 && dia >= 23) ||
-
-        (mes === 10 && dia <= 22)
-
-    ) {
-
-        return "libra";
-
-    }
-
-
-
-    if (
-
-        (mes === 10 && dia >= 23) ||
-
-        (mes === 11 && dia <= 21)
-
-    ) {
-
-        return "escorpiao";
-
-    }
-
-
-
-    if (
-
-        (mes === 11 && dia >= 22) ||
-
-        (mes === 12 && dia <= 21)
-
-    ) {
-
-        return "sagitario";
-
-    }
-
-
-
-    if (
-
-        (mes === 12 && dia >= 22) ||
-
-        (mes === 1 && dia <= 19)
-
-    ) {
-
-        return "capricornio";
-
-    }
-
-
-
-    if (
-
-        (mes === 1 && dia >= 20) ||
-
-        (mes === 2 && dia <= 18)
-
-    ) {
-
-        return "aquario";
-
-    }
-
-
-
-    if (
-
-        (mes === 2 && dia >= 19) ||
-
-        (mes === 3 && dia <= 20)
-
-    ) {
-
-        return "peixes";
-
-    }
-
-
-    return "";
-
-}
-
-
-
-/* =========================
-   CARACTERÍSTICAS
-========================= */
-
-
-const caracteristicas = {
-
-
-    aries:
-        "🔥 Áries é uma pessoa corajosa, determinada e cheia de energia. Gosta de desafios, aventuras e costuma tomar iniciativa.",
-
-
-    touro:
-        "🌱 Touro é conhecido por ser paciente, determinado e leal. Valoriza estabilidade, conforto e segurança.",
-
-
-    gemeos:
-        "💨 Gêmeos é comunicativo, curioso e inteligente. Gosta de aprender, conversar e conhecer coisas novas.",
-
-
-    cancer:
-        "🌊 Câncer é carinhoso, sensível e muito ligado à família. Valoriza amizades verdadeiras e sentimentos profundos.",
-
-
-    leao:
-        "☀️ Leão é confiante, criativo e carismático. Gosta de se destacar e costuma ter uma personalidade marcante.",
-
-
-    virgem:
-        "🌿 Virgem é organizado, observador e responsável. Gosta de ajudar e costuma prestar atenção aos pequenos detalhes.",
-
-
-    libra:
-        "⚖️ Libra é diplomático, sociável e gosta de harmonia. Valoriza relacionamentos, beleza e equilíbrio.",
-
-
-    escorpiao:
-        "🦂 Escorpião é intenso, determinado e misterioso. Possui sentimentos profundos e muita força de vontade.",
-
-
-    sagitario:
-        "🏹 Sagitário é aventureiro, otimista e livre. Gosta de viajar, aprender e viver novas experiências.",
-
-
-    capricornio:
-        "⛰️ Capricórnio é responsável, disciplinado e persistente. Costuma trabalhar duro para alcançar seus objetivos.",
-
-
-    aquario:
-        "⚡ Aquário é criativo, independente e inovador. Gosta de liberdade e costuma ter ideias diferentes.",
-
-
-    peixes:
-        "🐟 Peixes é sensível, imaginativo e empático. Possui muita criatividade e costuma se importar bastante com os outros."
-
-};
-
-
-
-/* =========================
-   NOMES DOS SIGNOS
-========================= */
-
-
-const nomesSignos = {
-
-
-    aries: "Áries",
-
-    touro: "Touro",
-
-    gemeos: "Gêmeos",
-
-    cancer: "Câncer",
-
-    leao: "Leão",
-
-    virgem: "Virgem",
-
-    libra: "Libra",
-
-    escorpiao: "Escorpião",
-
-    sagitario: "Sagitário",
-
-    capricornio: "Capricórnio",
-
-    aquario: "Aquário",
-
-    peixes: "Peixes"
-
-};
-
-
-
-/* =========================
-   MOSTRAR SIGNO
-========================= */
-
-
-function mostrarSigno() {
-
-
-    let nome =
-        document
-            .getElementById("nome")
-            .value
-            .trim();
-
-
-    let signoDigitado =
-        document
-            .getElementById("signo")
-            .value;
-
-
-    let data =
-        document
-            .getElementById(
-                "dataNascimento"
-            )
-            .value;
-
-
-    let resultado =
-        document
-            .getElementById(
-                "resultado"
-            );
-
-
-    let signo = "";
-
-
-
-    /*
-       SE ESCOLHEU DATA,
-       A DATA TEM PRIORIDADE
-    */
-
-
-    if (data !== "") {
-
-
-        signo =
-            descobrirSigno(data);
-
-    }
-
-
-    /*
-       CASO CONTRÁRIO,
-       USA O SIGNO DIGITADO
-    */
-
-
-    else if (
-        signoDigitado.trim() !== ""
-    ) {
-
-
-        signo =
-            normalizarTexto(
-                signoDigitado
-            );
-
-    }
-
-
-    /*
-       NENHUMA INFORMAÇÃO
-    */
-
-
-    else {
-
-
-        resultado.style.display =
-            "block";
-
-
-        resultado.innerHTML =
-            "⚠️ Digite seu signo ou escolha sua data de nascimento.";
-
-
-        return;
-
-    }
-
-
-
-    /*
-       SIGNO INVÁLIDO
-    */
-
-
-    if (
-        !caracteristicas[signo]
-    ) {
-
-
-        resultado.style.display =
-            "block";
-
-
-        resultado.innerHTML =
-            "❌ Não reconheci esse signo. Digite um dos 12 signos do zodíaco.";
-
-
-        return;
-
-    }
-
-
-
-    /*
-       NOME
-    */
-
-
-    let mensagemNome = "";
-
-
-    if (nome !== "") {
-
-
-        mensagemNome =
-            "Olá, " +
-            nome +
-            "! 👋<br><br>";
-
-    }
-
-
-
-    /*
-       MOSTRAR RESULTADO
-    */
-
-
-    resultado.style.display =
-        "block";
-
-
-    resultado.innerHTML =
-
-        mensagemNome +
-
-        "<strong>✨ Seu signo é " +
-
-        nomesSignos[signo] +
-
-        "!</strong><br><br>" +
-
-        caracteristicas[signo];
-
-}
-
-</script>
+    </script>
 
 
 </body>
